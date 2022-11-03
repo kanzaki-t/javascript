@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        1.// 可以通过...展开一个数组
+            function fn(a,b,c) {
+            return a+b+c
+            }
+
+            const arr = [1,2,3]
+            let result = fn(...arr)
+            console.log(result)
+
+        2.
+            const arr1 = [7,8,9,...arr,4,5,6]
+            console.log(arr1)
+
+        3.// 可以通过...展开一个对象
+            const obj1 = {
+                    name:'大空翼',
+                    age:18,
+                    gender:'男'
+            }
+
+            const obj2 = {...obj1,adress:'日本'}
+            console.log(obj2)
+            
+
+
+
+    </script>
+</body>
+</html>

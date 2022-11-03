@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字面量和变量</title>
+</head>
+<body>
+    <script>
+        /*
+            字面量
+                -字面量其实就是一个【值】，它所代表的含义就是它字面的意思
+                -比如：1，2，3，4，"hello"，true，null
+                -在js中所有的字面量都可以直接使用,但是直接使用字面量并不方便
+        */
+
+        /*
+            变量
+                -变量可以【存储】字面量
+                -并且变量中存储的字面量可以随意的修改
+                -通过变量可以对字面量进行描述（变量名），并且变量比较方便修改
+
+            变量的使用
+                -声明变量：var，let，const +变量名
+                -变量赋值：a = xx
+                -声明和赋值同时进行：let a = xx
+                var 
+                    -没有块级作用域（全局变量），尽量不要使用
+            
+                let
+                    -有块级作用域（局部变量）
+
+                const
+                    -有块级作用域（局部变量），但是只能赋值一次（常量）
+                    -使用场景：
+                        1.对于一些常量可以使用const声明
+                        2.对于一些对象（函数）也可以使用const声明
+                            这样可以避免对象（函数）被意外修改
+                            ex.
+                                const obj = {name:"太郎"}
+                                const fn = function () {}
+            变量的内存
+                -变量中并不存储任何值，而是存储值的【内存地址】    
+        
+        */
+    </script>
+</body>
+</html>

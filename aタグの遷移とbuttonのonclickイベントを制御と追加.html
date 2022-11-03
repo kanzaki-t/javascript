@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aタグの遷移とbuttonのonclickイベントを制御と追加</title>
+    <script>
+
+        const aTagAction = selector => {
+            const aTags = document.querySelectorAll(selector)
+            if (aTags) {
+                for (const aTag of aTags) {
+                    aTag.href = 'javascript:void(0)'
+                    aTag.target = ''
+                }
+            }
+        }
+
+        //preventDefault()和stopPropagetion()需要一起使用，只使用任意一个都不起作用
+        const buttonAction = selector => {
+            const btns = document.querySelectorAll(selector)
+            if (btns) {
+                for (const btn of btns) {
+                    btn.type = 'button'
+                    btn.onclick = e =>{
+                        e.preventDefault()
+                        e.stopPropagetion()
+                    }
+                }
+            }
+        }
+
+        const addButtonAction = selector => {
+            const btns = document.querySelectorAll(selector)
+            if (btns) {
+                for (const btn of btns) {
+                    btn.onclick = function () {}
+                    btn.addEventListener('click',e => {alert('add success!')})
+                }
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <!-- aTagAction里面传入aタグ的【classname】当作参数，来绑定所指定的aタグ -->
+    <button onclick="aTagAction('a.a-classname')">aタグを制御</button>
+    <a class="a-classname" href="https://www.google.com/" target="_self">googleホームページ</a><br><br>
+
+    <!-- buttonAction里面传入button的任意【属性】当作参数，来绑定所指定的button -->
+    <button onclick="buttonAction('button[status]')">buttonイベントを制御</button>
+    <button class="button-classname" status=1 type="button" onclick="alert('ボタンがクリックされました')" >alert出る</button><br><br>
+
+    <button onclick="addButtonAction('button.button-classname1')" >buttonイベントを追加</button>
+    <button class="button-classname1" status=1 type="button" >alertを追加</button>
+
+
+</body>
+
+</html>

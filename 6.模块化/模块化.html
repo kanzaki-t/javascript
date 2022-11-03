@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--
+        默认情况下，script标签中不能使用import语句，
+            如果想让其支持模块化，必须设置script的type属性为module
+    -->
+    <script type="module">
+
+        // 默认导入
+        // 对于export default a导出的变量值，没有必要一定要用a来导入，任何名字（lalala）都可以
+        import lalala from './m1.js'
+        console.log('用lalala显示:',lalala);
+
+        // 命名导入
+        // 必须使用用一个变量（函数，对象。。。）名
+        import {b,c,fn} from './m1.js'
+        console.log('命名导入:',b,c,);
+        fn()
+
+        // 默认导入和命名导入同时使用
+        // import lalala，{b,c,fn} from './m1.js'
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

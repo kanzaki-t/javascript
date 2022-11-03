@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        * 类
+        * -类是对象的模板
+        * -类决定了一个对象中有哪些属性和方法
+        * -使用class来定义一个类
+        */
+
+        class Person {
+            // 在类中定义属性，但是会写死
+            // name = "孙悟空";
+            // age = 18;
+
+            // 用constructor（构造器）来动态定义属性
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            // 在类中定义方法
+            run() {
+                console.log('i can fly');
+            }
+        }
+
+        const per = new Person('孙悟空',20)
+
+        console.log(per);
+        per.run()
+    </script>
+</body>
+
+</html>

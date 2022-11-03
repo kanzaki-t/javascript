@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        1.
+            let arr = ['太郎','次郎']
+            const [a,b] = arr
+
+            console.log(a,b)
+
+        2.
+            function fn() {
+                return ['長男','次男']
+            }
+            const [c,d] = fn()
+
+            console.log(c,d)
+
+        3.
+            arr = ['太郎','次郎','長男','次男']
+            const [e, f, , g] = arr // 可以跳过元素
+            console.log(e,f,g)
+
+            const [h, i, ...j] = arr // ...变量，会接收后面所有的元素，但是必须放在最后面
+            console.log('h='+h, 'i='+i, 'j='+j)
+
+        4.
+            const obj1 = {
+                name:'大空翼',
+                age:18,
+                gender:'男'
+            }
+
+            //const {name:name,age:age,gender:gender} = obj1
+            const {name,age,gender} = obj1 // 如果变量名和属性名一致，则可以只写一个
+
+            console.log(name,age,gender)
+
+        5. 
+            k = 10;
+            l = 20;
+
+            [k,l]=[l,k]
+
+            console.log(k,l)
+            
+
+    </script>
+</body>
+</html>
