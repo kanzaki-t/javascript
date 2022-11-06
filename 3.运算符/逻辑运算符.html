@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑运算符</title>
+    <script>
+        /*
+            ! 逻辑非
+                - 可以用来对一个值进行非运算
+                - 它可以对一个布尔值进行取反操作
+                    true -> false
+                    false -> true
+                - 如果对一个非布尔值进行取反，他会先将其转换为布尔值然后再取反
+                    可以利用这个特点来将其他类型转换为布尔值
+            && 逻辑与
+                - 可以对两个值进行与运算
+                - &&左右都为true时，则返回 true， 否则返回 false
+                - 与运算是短路的与，如果第一个值为 false，则不看第二个值
+                - 与运算是找 false的，如果找到 false则直接返回，没有 false才会返回 true
+                - 对于非布尔值进行与运算，它会转换为布尔值然后运算，但是最终会返回 原值
+                    - 如果第一个值为 false，则直接返回第一个值
+                    - 如果第一个值为 true，无论第二个值是 true 还是 false，则返回第二个值
+            || 逻辑或
+                - 可以对两个值进行或运算
+                - ||左右有true时，则返回 true，否则返回 false
+                - 或运算是短路的或，如果第一个值为 true，则不看第二个值
+                - 或运算是找 true的，如果找到 true则直接返回，没有 true才会返回 false
+                - 对于非布尔值进行或运算，它会转换为布尔值然后运算，但是最终会返回 原值
+                    - 如果第一个值为 false，则返回第二个值
+                    - 如果第一个值为 true，无论第二个值是 true 还是 false，则返回第一个值
+        */
+
+
+        let res = true && true // true
+        res = true && false // false
+        res = false && true // false
+        res = false && false // false
+
+        //    true && true
+        res = 1 && 2 // 2
+        //    true && false
+        res = 1 && 0 // 0
+        //    false && true
+        res = 0 && 2 // 0 *如果第一个值为 false，则不看第二个值
+
+        res = true || false // true
+        res = false || true // true
+        res = true || true // true        
+        res = false || false // false        
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

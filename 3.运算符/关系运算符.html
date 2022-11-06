@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关系运算符</title>
+    <script>
+        /*
+            关系运算符
+                -关系运算符用来检查两个值之间的关系是否成立
+                    成立则返回 true
+                    不成立则返回 false
+                >
+                >=
+                <
+                <=
+            注意：
+                当对非数值进行关系运算时，它会先将非数值转换为数值然后在比较
+                    false -> 0
+                    '10' -> 10
+                当关系运算符的两端是两个字符串，他不会将字符串转换为数值，
+                而是逐位的比较字符的Unicode编码
+                    利用这个特点可以对字符串按照字母排序
+        */
+
+        let res = 5 < '10' // true
+        res = 1 > false // true
+        res = 'a' < 'b' // true
+        res = 'z' < 'b' // false
+        res = 'abc' < 'b' // true
+        res = '12' < '2' // true
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
