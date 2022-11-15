@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type=radio并且name属性相同的input</title>
+</head>
+
+<body>
+
+    <!-- type=radio并且name属性相同的input为单选框，同时只能显示一个 -->
+    <label>
+        <input type="radio" name="a"> aaaa
+    </label>
+
+    <br>
+
+    <label>
+        <input type="radio" name="a"> bbbb
+    </label>
+
+    <!-- 在type=radio并且name属性相同的input的单选框外层套上form，可以抵消单选变成多选 -->
+    <form>
+        <label>
+            <input type="radio" name="a"> cccc
+        </label>
+    </form>
+
+    <form>
+        <label>
+            <input type="radio" name="a"> dddd
+        </label>
+    </form>
+
+</body>
+
+</html>
