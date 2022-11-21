@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else语句</title>
+    <script>
+        /*
+
+            if-else语句
+                - 语法：
+                    if (条件表达式) {
+                        语句A
+                    }else{
+                        语句B
+                    }
+                - 执行流程
+                    if-else语句在执行时会先对if后的条件表达式进行求值判断
+                        如果结果为true，则执行if后的语句A
+                        如果结果为false，则执行else后的语句B
+
+            if-else if-else
+                -语法:
+                    if (条件表达式) {
+                        语句A
+                    }else if (条件表达式){
+                        语句B
+                    }else if (条件表达式){
+                        语句C
+                    }else{
+                        语句D
+                    }
+                - 执行流程
+                    if-else if-else语句会自上向下依次对if后的条件表达式进行求职判断
+                        如果结果为true，则执行if后的语句A，执行完毕语句结束
+                        如果结果为false，则继续向下判断，直到找到true为止
+                        如果所以的条件表达式都是false，则执行else后的语句
+
+                    - 注意：
+                        只会有一个代码块被执行，一旦有执行的代码块，下边的条件都不会再继续判断了
+                        
+        */
+
+        let a = 19
+
+        // 条件逻辑不对 alert('可以结婚了')永远不会执行
+        if(a>=18){
+            alert('可以抽烟了')
+        }else if(a>=22){
+            alert('可以结婚了')
+        }else{
+            alert('小屁孩')
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
