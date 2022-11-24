@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 这样的写法会报错，因为const声明的是常量
+        // const arr1 = ['あ','い']
+        // arr1=arr1.filter(x => x =='あ')
+        // console.log(arr1);
+
+        // 使用filter需要生成一个新数组
+        let arr2 = ['う','え','お']
+        arr2=arr2.filter(x => x !=='う')
+        console.log(arr2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
