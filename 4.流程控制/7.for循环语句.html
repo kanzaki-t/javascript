@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环语句</title>
+    <script>
+        /*
+            循环语句
+                - 通过循环语句可以使指定的代码反复执行
+                - js中一共有3种循环语句
+                    while
+                    do-while
+                    for
+                - for
+                    - for循环和while循环没有本质的区别，都是用来反复执行代码
+                    - 不同点就是语法结构，for循环更加清晰
+                    - 语法：
+                        for(初始化表达式;条件表达式;更新表达式){
+                            循环体
+                        }
+                    - 执行流程
+                        1.执行初始化表达式，初始化变量
+                        2.执行条件表达式，判断循环是否执行
+                        3.判断结果为true，执行循环体
+                        4.执行更新表达式，对初始化变量进行修改
+                        5.重复2，直到判断为false为止
+                    初始化表达式，在循环的整个的生命周期中只会执行1次
+                    使用let在for循环的（）中声明的变量，是局部变量，只能在for循环中内部访问
+                        -使用var声明可以在外部访问
+                    创建死循环的方式
+                        while(1){}
+                        for(;;){}
+
+        */
+
+        for(let i=0;i<5;i++){
+            console.log(i);
+        }
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

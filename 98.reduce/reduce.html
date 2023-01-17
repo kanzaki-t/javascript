@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce</title>
+</head>
+
+<body>
+    <script>
+        // 目标：数组的reduce方法，累计运算
+        // 语法：reduce((previousValue(或者是accumulator), currentValue, currentIndex, array) => { /* … */ } )
+        // reduce((acc,cur) =>{}
+        // reduce((pre,cur) =>{}
+        /*
+            数组变量名.reduce((sum,value) => {
+                // 向sum变量上累加值
+                // 一定要return 值给下一次循环sum初始值
+            },0)
+        */
+        // 执行过程：每个值执行一次函数体，每次函数体执行都是独立的，sum也是独立的
+        // 返回值：整个reduce方法在原地的结果，最后累加的和
+        let arr = [1, 2, 3, 4]
+
+        let result = arr.reduce((sum, value) => {
+            sum = sum + value
+            return sum
+        }, 0)
+
+        console.log(result);
+
+
+        let initialValue = 0
+        let sum = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(function (previousValue, currentValue) {
+            return previousValue + currentValue.x
+        }, initialValue)
+
+        console.log(sum)
+
+        let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+            function (previousValue, currentValue) {
+                return previousValue.concat(currentValue)
+            },
+            []
+        )
+    </script>
+
+</body>
+
+</html>

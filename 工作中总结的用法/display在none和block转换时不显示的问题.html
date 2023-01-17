@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+
+        function buttonClick() {
+            let user2 = document.getElementById('username2').value
+            //alert(user2);
+            if (user2.trim() == "") {
+                alert("氏名は必須入力です。(js)");
+                let errmsg = document.getElementById('errname')
+                errmsg.style.display = "inline"
+            }else {
+                let errmsg = document.getElementById('errname')
+                errmsg.style.display = "none"
+            }
+        }
+
+    </script>
+    <form>
+        氏名2: <input type="text" id="username2" value="" /><br />
+        <span id="errname" style="color:red;display:none">氏名は必須入力です</span><br />
+        <!--正常转换-->
+        <button type="button" id="btn" onclick="buttonClick()">送信</button>
+        <!--button没有设置type，不正常正常转换-->
+        <!-- <button  id="btn" onclick="buttonClick()">送信</button> -->
+    </form>
+</body>
+
+</html>

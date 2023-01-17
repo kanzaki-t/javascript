@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环语句</title>
+    <script>
+        /*
+            循环语句
+                - 通过循环语句可以使指定的代码反复执行
+                - js中一共有3种循环语句
+                    while
+                    do-while
+                    for
+                - do-while
+                    - 语法：
+                        do{
+                            语句...
+                        }while(条件表达式)
+                    - 执行流程
+                        在执行时，会先执行do后的循环体
+                        执行完毕后，会对while后的条件表达式进行判断
+                        如果为false，则循环终止
+                        如果为true，则继续执行循环体
+
+        */
+
+        // let i=0
+        // while (i<5) {
+        //     console.log(i);
+        //     i++
+        // }
+
+        // let i=0
+        // do{
+        //     console.log(i);
+        //     i++
+        // }while(i<5)
+
+        // 效果一样
+        // 区别：
+        //    while语句是先判断再执行
+        //    do-while语句是先执行后判断
+        //    实质的区别：
+        //              do-while语句可以确保循环至少执行一次
+
+        // let i=0
+        // while (i<5) {
+        //     console.log(i);
+        //     i++
+        // }
+
+        let i = 10
+        do {
+            console.log(i);
+            i++
+        } while (i < 5)
+        // 不执行
+
+        let r = 10
+        do {
+            console.log(i);
+            i++
+        } while (i < 5)
+        // 会输出一个10之后停止循环
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
