@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+    <script>
+        /*
+            对象是js中的一种复合数据类型，它就相当于一个容器（塑料袋），
+            在对象中可以存储各种不同类型数据
+             - 对象中存储的数据，称为属性
+        */
+
+        // 创建对象
+        let obj = new Object()// new可以省略
+        console.log(obj);
+
+        // 向对象中添加属性
+        // 对象.属性名 = 属性值
+        obj.name = "小白"
+        console.log(obj);
+
+        // 读取对象中的属性值
+        // 对象.属性名
+        console.log(obj.name);
+
+        // 修改属性
+        obj.name = "小黑"
+        console.log(obj.name);
+
+        // 删除属性
+        delete obj.name
+        console.log(obj.name);
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

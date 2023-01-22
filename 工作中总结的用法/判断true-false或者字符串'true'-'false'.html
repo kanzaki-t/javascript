@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判断true-false或者字符串'true'-'false'</title>
+    <script>
+        const convertStrToBool = str => {
+            if (typeof str !== 'string') {
+                return Boolean(str)
+            }
+            const obj = JSON.parse(str.toLowerCase())
+            return obj === true
+        }
+
+        const a = 'true'
+        const b = 'false'
+
+        // a === true || a === 'true' ? alert('aaaaaa') : alert('xxxxx')
+        convertStrToBool(a) ? alert('aaaaaa') : alert('xxxxx')
+
+        // b === false || b === 'false' ? alert('bbb') : alert('xxxxx')
+        !convertStrToBool(b) ? alert('bbb') : alert('xxxxx')
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

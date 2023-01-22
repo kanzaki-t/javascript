@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+    <script>
+        /*
+            属性名
+                - 通常属性名就是一个字符串，所以属性名可以是任何值，没有什么特殊要求
+                    但是如果你的属性名太特殊了，不能直接使用，需要使用[]来设置
+                - 使用[]去操作属性时，可以使用变量
+            属性值
+                - 属性值可以是任何类型的数据类型，也可以是一个对象
+            使用typeof检查一个对象，得到object
+        */
+
+        // 创建对象
+        let obj = new Object()// new可以省略
+        console.log(obj);
+
+        // 向对象中添加属性
+        // 对象.属性名 = 属性值
+        obj.name = "小白"
+        obj["@#$$%$%"] = "vvvv"
+        // 使用[]方式添加属性和属性值时，可以使用变量，使用.的方式不可以使用变量
+        let str = "address"
+        obj.str = "文化路"
+        obj[str] = "黄河路"
+        obj.f = Object()
+        obj.f.name = "ssss" 
+        console.log(obj);
+
+        // 读取属性值
+        console.log(obj.name);
+        console.log(obj["name"]);
+
+        /*
+            in 运算符
+                - 用来检查对象中是否含有某个属性
+                - 语法 属性名 in obj
+                - 如果有返回true，没有返回false
+        */
+
+        console.log("name" in obj);
+        console.log("aaaa" in obj);
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
