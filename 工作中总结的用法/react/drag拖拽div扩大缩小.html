@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drag拖拽div扩大缩小</title>
+    <script>
+        /*
+            可以在state里设置相关的宽，高等等的状态，然后用
+            onMouseDown
+            onMouseUp
+            onMouseMove事件来控制拖拽的变化
+
+            可以在componentDidMount里添加
+            document.addEventListener('mouseup', this.handleMouseUp)
+            来使拖拽结束时鼠标放开有效的区域为window
+
+            可以在onMouseMove里使用这样的算拖拽宽高的方法
+                const minWidth = 100
+                const minHeight = 100
+
+                let newWidth = width + (e.clientX - startX)
+                let newHeight = height + (e.clientY - startY)
+
+                if (newWidth < minWidth) {
+                newWidth = minWidth
+                }
+
+                if (newHeight < minHeight) {
+                newHeight = minHeight
+                }
+
+        
+        */
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

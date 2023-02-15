@@ -34,10 +34,16 @@
             }
         }
 
+        // 通过类（构造器）来创建对象
         const per = new Person('孙悟空',20)
 
         console.log(per);
         per.run()
+        
+        // instanceof检查一个对象是否是由某个类创建
+        // 如果某个对象是由某个类所创建，则我们称该对象是这个类的实例
+        console.log(per instanceof Person);
+        
     </script>
 </body>
 

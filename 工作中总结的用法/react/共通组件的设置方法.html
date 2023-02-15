@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drag拖拽div扩大缩小</title>
+    <script>
+        /*
+            总页面--父组件
+            功能页面--子组件
+
+            父组件
+
+                import 子组件名 from '子组件路径'
+
+                设置state
+                    -类组件，constructor里设置起始默认值
+                    -函数组件，使用useState
+
+
+                ...此处省略其他代码
+
+                设置回调函数
+                    目的：子组件的状态和父组件的共享，并且状态一致
+                    例子：
+                        handleStateChange = newState => {
+                            this.setState(newState)
+                        }
+
+                render() {
+                    return (
+                        ...此处省略前置代码
+                        ...此处省略前置代码
+
+                        <子组件名
+                            传入各种状态
+                            ...
+                            ...
+                            ...
+                            传入回调函数
+                            onStateChange={this.handleStateChange}
+                        />
+
+                    )
+                }
+
+            子组件
+                
+                设置state
+                    -类组件，constructor(props)里设置传入的state
+                    -函数组件，使用useState
+                
+                <div>
+                    ...
+                    ...
+                </div>
+        
+        
+        
+        
+        
+        */
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

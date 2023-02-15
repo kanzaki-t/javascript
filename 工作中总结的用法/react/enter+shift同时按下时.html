@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enter+shift</title>
+    <script>
+        /*
+            设置一个共通module函数，
+            然后在页面标签内引用
+
+
+            module
+                const handleKeyPress = e => {
+                    if (e.keyCode === 13 && e.shiftkey) {
+                        e.preventDefault()
+
+                        return true
+                    }
+                    reture false
+                }
+
+            页面
+                import { handleKeyPress } from '路径'
+                
+                <textarea
+                    ...
+                    ...
+                    onKeyDown={e => {
+                        if (handleKeypress(e)){
+                            方法...
+                        }
+                    }}
+                
+                
+                />
+
+        
+        */
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
