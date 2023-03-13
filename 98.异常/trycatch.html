@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>123</p>
+
+    <script>
+        function fn() {
+            try {
+                const p = document.querySelector('.p')
+                p.style.color = 'red'
+            } catch (error) {
+                // 拦截错误，提示浏览器提供的错误信息，但是不中断程序的执行
+                console.log(error.message);
+
+                // 中断程序的方法1：
+                return
+
+                //中断程序的方法2：
+                throw new Error('选择器错误')
+            }
+            finally {
+                // 不管你程序对不对，一定会执行的代码
+                alert('aaaa')
+            }
+        }
+
+        // 如果catch不中断，则会执行22222
+        console.log('22222');
+    </script>
+</body>
+
+</html>
