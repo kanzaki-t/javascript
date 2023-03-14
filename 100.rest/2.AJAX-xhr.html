@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点我获取数据</button>
+    <script>
+        const btn = document.getElementById('btn')
+        btn.onclick = () => {
+            // 向服务器发送请求
+            /*
+                在js中向服务器发送的请求加载数据的技术叫AJAX
+
+                AJAX
+                    - A 异步 J JavaScript A 和 X xml
+                    - xml是早期AJAX使用的数据格式
+
+                    -可以选择的方案：
+                        1.XMLHTTPRequest
+                        2.Fetch
+                        3.AXIOS
+            */
+
+            // 方式一：xhr
+            // 创建一个新的xhr对象，xhr表示请求信息
+            const xhr = new XMLHttpRequest()
+
+            // 设置请求的信息
+            xhr.open("GET","url")
+
+            // 发送请求
+            xhr.send()
+
+            // 读取响应信息
+            // 因为是异步，所以无法直接读取数据
+            xhr.onload = () => {
+
+                if (xhr.status === 200) {
+                    const result = JSON.parse(xhr.response)
+                    console.log(result);
+                }
+               
+            }
+            
+        }
+    </script>
+</body>
+</html>
