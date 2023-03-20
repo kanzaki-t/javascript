@@ -9,28 +9,23 @@
 </head>
 
 <body>
-    <button id="btn">点我获取数据</button>
+    <button id="btn01">发送请求</button>
+    <button id="btn02">中止请求</button>
     <script>
-        const btn = document.getElementById('btn')
-        btn.onclick = () => {
-            // 向服务器发送请求
+        const btn01 = document.getElementById('btn01')
+        const btn02 = document.getElementById('btn02')
 
-            // 方式二：fetch
-            // 采用的是promise API，原生js就支持
-
-            // 创建一个新的xhr对象，xhr表示请求信息
-            const xhr = new XMLHttpRequest()
-
-            // 设置请求的信息
-            // 当我们访问的是需要权限的api时，必须在请求中附加权限的信息
-            // token一般都是通过请求头来发送
-            const token = localStorage.getItem("token")
+        let controller
+        btn01.onclick = () => {
+            controller = new AbortController() 
             fetch("url", {
                 method: 'GET',
                 headers:{
                     // 发送token，必须使用authorization，和Bearer
                     "authorization": `Bearer ${token}`
-                }
+                },
+                // 给请求头里配置终止请求控制
+                singnal: controller.signal
             })
                 .then(res => {
                     if (res.status === 200) {
@@ -46,16 +41,9 @@
                     console.log(err);
                 })
             
-            fetch("url", {
-                method: 'POST',
-
-                headers:{
-                    "Content-type":"application/json"
-                },
-
-                // 通过body去发送数据时，必须通过请求头来指定数据的类型
-                body:JSON.stringify(data)//需要把obj的数据转换成json型
-            })   
+        btn02.onclick = () => {
+            controller.abort()
+        }
 
 
         }
